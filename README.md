@@ -9,6 +9,7 @@ I have been building the packages on Ubuntu Karmic.  I needed to install the fol
 - debhelper
 - git-buildpackage
 - build-essential
+- git2cl (download from http://josefsson.org/git2cl/ and put it somewhere in your PATH)
 
 Export the following variables in your ~/.bashrc
 
@@ -45,6 +46,10 @@ Export the following variables in your ~/.bashrc
   is the same as the upstream branch except it also has a 'debian' directory.  Add and commit this directory now.
   We'll be editing the contents, but if you commit it you'll be able to return to a clean slate without re-running
   dh\_make later if you make a mistake.
+
+- Generate a ChangeLog file.
+
+    git log --pretty --numstat $TAG | git2cl > ChangeLog 
 
 - Generating the package could now in theory be as simple as running 'git buildpackage'.  More than likely it will fail
   and you'll have to edit the debian/rules file.  Even if the package build *does* succeed, there will be a bunch of warnings
