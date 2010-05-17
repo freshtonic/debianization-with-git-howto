@@ -12,9 +12,9 @@ I have been building the packages on Ubuntu Karmic.  I needed to install the fol
 
 Export the following variables in your ~/.bashrc
 
-DEBEMAIL=freshtonic@gmail.com
-DEBFULLNAME="James Sadler"
-export DEBEMAIL DEBFULLNAME
+    DEBEMAIL=freshtonic@gmail.com
+    DEBFULLNAME="James Sadler"
+    export DEBEMAIL DEBFULLNAME
 
 ## Building a package
 
